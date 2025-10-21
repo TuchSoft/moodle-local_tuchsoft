@@ -25,9 +25,6 @@ Also, responsible for placing the "Built by Tuchsoft" link and Tuchsoft strcture
 * Website: [tuchsoft.com](https://tuchsoft.com)
 * Github: [@tuchsoft](https://github.com/tuchsoft)
 
-[![TuchSoft logo](https://tuchsoft.com/assets/images/logo-dark.webp)](https://tuchsoft.com)
-
-
 
 ## License
 
