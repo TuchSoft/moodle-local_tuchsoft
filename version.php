@@ -25,8 +25,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_tuchsoft';
-$plugin->release = '1.0.0';
-$plugin->version = 2025071404;
+$plugin->release = '1.1.0';
+$plugin->version = 2025102100;
 $plugin->requires = 2018051718;
 $plugin->maturity = MATURITY_BETA;
 $plugin->supported = [403, 502];

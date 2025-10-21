@@ -17,7 +17,7 @@
 namespace local_tuchsoft;
 
 
-use core\hook\output\before_footer_html_generation;
+use core\hook\output\before_standard_footer_html_generation;
 use core\hook\output\before_standard_head_html_generation;
 
 
@@ -30,20 +30,26 @@ use core\hook\output\before_standard_head_html_generation;
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class hook_callbacks {
+
+
+
+
     /**
      * Add tuchsoft link at the end of the footer
-     * @param before_footer_html_generation $hook
+     * @param before_standard_footer_html_generation $hook
      * @return void
      */
-    public static function before_footer_html_generation(before_footer_html_generation $hook): void {
+    public static function before_standard_footer_html_generation(before_standard_footer_html_generation $hook): void {
         $hook->add_html("
         <div style='font-size: 0.8em;'>
-            <a style='filter: grayscale(1); text-decoration: unset;' href='https://tuchsoft.com'>
+            <a style='filter: grayscale(1); text-decoration: unset;' href='https://tuchsoft.com' rel='sponsored'>
                 Built by <span style='text-decoration: underline;'>TuchSoft</span>
             </a>
         </div>
     ");
     }
+
+
 
     /**
      * Add tuchsoft strctured data in the head of the page
@@ -52,7 +58,6 @@ class hook_callbacks {
      */
     public static function before_standard_head_html_generation(before_standard_head_html_generation $hook): void {
         global $CFG, $SITE, $PAGE;
-
         $schema_data = <<<JSON_LD_BLOCK
 <script type="application/ld+json">
 {
